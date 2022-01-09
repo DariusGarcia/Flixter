@@ -27,7 +27,7 @@ Flixter is an app that allows users to browse movies from the [The Movie Databas
 <img src="https://i.imgur.com/mlWelK2.gif" width=250><br>
 
 ### Notes
-Describe any challenges encountered while building the app.
+A few challenges I faced trying to set up the Glide library in Android Studios and trying to render the book images to the RecyclerView. I have limited experience with Android Studios so I had some trouble trying to import the Glide libray into the program and trying to configure the modules so my android emulator would run without any errors. I was able to solve this problem by referencing the Glide instructions and just tickering around with the modules and 'dependencies' until I was able to get it. The second problem I was faced was not being able to get my book images to render in the application when running the emulator. This problem was linked to my intial problem because I did not add the dependencies necessary to be able to execute Glide. 
 
 ### Open-source libraries used
 
