@@ -1,5 +1,6 @@
 package com.example.flixter
 
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -24,9 +25,19 @@ class MainActivity : AppCompatActivity() {
     // 4. Create an Adapter and ViewHolder to render the item - DONE
     // 5. Bind the Adapter to the data source to populate the RecyclerView - DONE
     // 6. Bind a layout manager to the RecyclerView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        val orientation = resources.configuration.orientation
+        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+            setContentView(R.layout.activity_main)
+
+        } else if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            setContentView(R.layout.activity_main)
+
+        }
+
         rvMovies = findViewById(R.id.rvMovies)
 
         val movieAdapter = MovieAdapter(this, movies)
